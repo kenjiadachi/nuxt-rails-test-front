@@ -38,7 +38,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Nuxt.js modules
@@ -81,15 +82,15 @@ export default {
     }
   },
   env: {
-    BASE_URL,
-    FB_API_KEY,
-    FB_AUTH_DOMAIN,
-    FB_DB_URL,
-    FB_PJ_ID,
-    FB_STORAGE_BACKET,
-    FB_MESSAGING_SENDER_ID,
-    FB_APP_ID,
-    FB_MEASUREMENT_ID
+    BASE_URL: process.env.BASE_URL,
+    FB_API_KEY: process.env.FB_API_KEY,
+    FB_AUTH_DOMAIN: process.env.FB_AUTH_DOMAIN,
+    FB_DB_URL: process.env.FB_DB_URL,
+    FB_PJ_ID: process.env.FB_PJ_ID,
+    FB_STORAGE_BACKET: process.env.FB_STORAGE_BACKET,
+    FB_MESSAGING_SENDER_ID: process.env.FB_MESSAGING_SENDER_ID,
+    FB_APP_ID: process.env.FB_APP_ID,
+    FB_MEASUREMENT_ID: process.env.FB_MEASUREMENT_ID
   },
   watchers: {
     webpack: {
