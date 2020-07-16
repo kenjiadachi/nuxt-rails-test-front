@@ -1,0 +1,8 @@
+build:
+  docker:
+    web: Dockerfile.prd
+  config:
+    WORKDIR: app
+    API_URL: https://nuxt-rails-sample-back.herokuapp.com/
+run:
+  web: yarn run start

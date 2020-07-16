@@ -10,8 +10,8 @@ nav.navbar.has-background-light
       span
   #navbarExampleTransparentExample.navbar-menu(:class="{'is-active':showNav}")
     .navbar-end
-      nuxt-link.navbar-item(to="/")
-        | Home
+      nuxt-link.navbar-item(v-for="item in items" :key="item.title" :to="item.url")
+        | {{ item.title }}
       .navbar-item.has-dropdown.is-hoverable
         .navbar-dropdown.is-boxed
           nuxt-link.navbar-item(v-for="item in items" :key="item.title" :to="item.url")
