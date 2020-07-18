@@ -91,3 +91,5 @@ sw.*
 
 # ash_history
 .ash_history
+
+.nuxtrc
