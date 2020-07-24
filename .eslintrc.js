@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   root: true,
   env: {
     browser: true,
@@ -6,13 +6,17 @@ export default {
   },
   extends: [
     '@nuxtjs/eslint-config-typescript',
-    '@nuxtjs',
-    'prettier',
-    'prettier/vue',
+    'plugin:nuxt/recommended',
     'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
+    'prettier',
+    'prettier/vue'
   ],
-  // add your custom rules here
+  plugins: [
+    'vue'
+  ],
   rules: {
+    'vue/html-closing-bracket-newline': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   }
-}
+};

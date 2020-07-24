@@ -22,7 +22,6 @@ export default {
     ...mapGetters('error', ['getMessage', 'existsMessage']),
   },
   watch: {
-    
   },
 }
 </script>
