@@ -24,6 +24,7 @@ export default {
   },
   methods: {
     closeModal() {
+      // @ts-ignore
       this.$emit('input', false)
     }
   }

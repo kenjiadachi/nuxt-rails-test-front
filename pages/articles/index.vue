@@ -8,7 +8,7 @@ div
 
 
 <script>
-import Card from '../../components/articles/Card.vue'
+import Card from '../../components/organisms/Card.vue'
 
 export default {
   components: {

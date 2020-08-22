@@ -7,8 +7,8 @@
 </template>
 
 <script lang='ts'>
-import NavBar from '../components/NavBar.vue'
-import Message from '../components/Message.vue'
+import NavBar from '../components/organisms/NavBar.vue'
+import Message from '../components/organisms/Message.vue'
 export default {
   components: {
     NavBar,

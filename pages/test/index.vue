@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import Modal from '../../components/Modal.vue'
+import Modal from '../../components/organisms/Modal.vue'
 
 export default {
   data() {
@@ -28,14 +28,13 @@ export default {
   },
   methods: {
     showModal() {
+      // @ts-ignore
       this.isShow = true;
     },
     closeModal() {
+      // @ts-ignore
       this.isShow = false;
     }
   }
 }
 </script>
-
-<style>
-</style>

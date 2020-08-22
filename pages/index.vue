@@ -19,12 +19,26 @@
 
 <script lang="ts">
 import { fireBase } from '../plugins/firebase'
+
+interface Result {
+  user: {
+    displayName: string,
+    email: string,
+    photoURL: string,
+    uid: string,
+  }
+}
+
 export default {
+  
   methods: {
     googleLogin() {
       var provider = new fireBase.auth.GoogleAuthProvider();
       var self = this;
-      fireBase.auth().signInWithPopup(provider).then(function(result) {
+      // @ts-ignore
+      fireBase.auth().signInWithPopup(provider).then(function(result: Result) {
+        
+        // @ts-ignore
         self.$axios.post(
           '/api/users', { 
             name: result.user.displayName,
@@ -32,20 +46,21 @@ export default {
             image: result.user.photoURL,
             uid: result.user.uid,
           }
-        ).then((res) => {
-          console.log(res);
+        ).then((res: any) => {
           let userObj = {
             name: res.data.name,
             image: res.data.image,
           }
+          // @ts-ignore
           self.$store.dispatch('user/setUser', userObj)
         })
-      }).catch(function(error) {
-        // Handle Errors here.
+      }).catch(function(error: Error) {
+        // @ts-ignore
         self.$store.dispatch('error/setMessage', error.message)
       });
     },
-    setError() {  
+    setError() {
+      // @ts-ignore
       this.$store.dispatch('error/setMessage', 'error!!!')
     }
   }

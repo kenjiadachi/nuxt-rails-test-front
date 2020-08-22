@@ -15,7 +15,6 @@ export default {
     }
   },
   methods: {
-    // ...mapGetters('error', ['getMessage', 'existsMessage']),
     ...mapActions('error', ['clearMessage']),
   },
   computed: {

@@ -26,7 +26,7 @@ article
 
 <script lang='ts'>
 export default {
-  async asyncData ({ $content, params }) {
+  async asyncData ({ $content, params }: { $content: any, params: any }) {
     const article = await $content('articles', params.slug || 'index').fetch()
     return { article }
   }

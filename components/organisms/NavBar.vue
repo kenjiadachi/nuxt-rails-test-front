@@ -25,6 +25,7 @@ nav.navbar.has-background-light
 </template>
 
 <script lang='ts'>
+
 export default {
   data() {
     return {
