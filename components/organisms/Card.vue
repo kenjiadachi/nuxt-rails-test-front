@@ -8,7 +8,8 @@ nuxt-link.card(:to="article.path")
       p.title.is-4 {{article.title}}
       | {{article.description}}
       br
-      time(datetime="2016-1-1") 11:09 PM - 1 Jan 2016
+  .card-footer
+    time(datetime="2016-1-1") 11:09 PM - 1 Jan 2016
 </template>
 
 <script lang='ts'>
@@ -32,3 +33,9 @@ export default {
 }
 </script>
 
+<style lang='stylus' scoped>
+.card-footer
+  border-top none
+  align-items flex-end
+
+</style>

@@ -32,7 +32,7 @@ export default {
       showNav: false,
       items: [
         { title: 'Home', icon: 'home', url: '/' },
-        { title: 'Feature', icon: 'code', url: '/feature' },
+        { title: 'Articles', icon: 'code', url: '/articles' },
         { title: 'Contact', icon: 'question_answer', url: '/contact' }
       ]
     }
